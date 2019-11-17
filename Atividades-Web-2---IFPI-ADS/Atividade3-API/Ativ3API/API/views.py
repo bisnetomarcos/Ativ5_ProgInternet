@@ -1,6 +1,6 @@
 import json
 from .serializers import *
-from .permissions import *
+from API.permissions import *
 from django.shortcuts import render
 from django.shortcuts import redirect
 from rest_framework import generics
@@ -12,6 +12,7 @@ from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
 from rest_framework.throttling import ScopedRateThrottle
 from rest_framework.views import APIView
+from rest_framework.authtoken.views import ObtainAuthToken
 
 class AddressList(generics.ListCreateAPIView):
     queryset = Address.objects.all()
